@@ -1,0 +1,194 @@
+@import url('./fonts.css');
+
+:root {
+    --aside-bg: #F7F7F7;
+    --drop-shadow: rgba(0, 0, 0, 0.25);
+    --main-color: #7B7B7B;
+    --user-personal-text: #4C4C4C;
+    --text-color: #181818;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ 
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+body {
+    min-width: 320px;
+    word-break: normal;
+    font-family: "Roboto", sans-serif;
+    --text-color: #181818;
+}
+
+/*_____________________________________________________________________*/
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, min(470px));
+    column-gap: 60px;
+}
+
+.title {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.paragraph {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+/*_____________________________________________________________________*/
+
+.aside {
+    background-color: var(--aside-bg);
+    display: grid;
+    justify-items: center;
+    padding: 40px;
+}
+
+.aside__personal-photo {
+    max-width: 350px;
+    border-radius: 50%;
+    filter: drop-shadow(4px 4px 4px var(--drop-shadow));
+}
+
+.aside__quote {
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+    color: var(--main-color);
+    padding: 65px 0 30px;
+}
+
+.aside__main-information {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    row-gap: 15px;
+}
+
+.aside__main-information-title {
+    font-size: 22px;
+}
+
+.aside__main-information-value {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: end;
+}
+
+.aside__characteristics {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    padding: 60px 0 60px;
+}
+
+.aside__my-characteristic {
+    display: block;
+    padding: 8px 30px 8px 20px;
+    color: white;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.aside__social-media-title {
+    font-size: 22px;
+}
+
+.aside__social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/*_____________________________________________________________________*/
+
+.section {
+    max-width: 970px;
+    width: 50vw;
+}
+
+.section__title {
+    padding: 25px 0 90px;
+}
+
+.section__title-padding {
+    padding-bottom: 20px;
+}
+
+.section__name {
+    font-weight: 700;
+    font-size: 90px;
+    color: var(--user-name-text);
+}
+
+.section__top-span {
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--user-personal-text);
+}
+
+.section-card__about-padding {
+    padding-bottom: 110px;
+}
+
+.section__bottom {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 70px;
+}
+
+
+
+/*_____________________________________________________________________*/
+
+@media (max-width: 1080px) {
+
+.container {
+    max-width: 470px;
+    margin: 0 auto;
+}
+
+.section {
+    max-width: 470px;
+}
+
+}
