@@ -1,12 +1,8 @@
 @import url('./fonts.css');
+@import url(./mormalize.css);
+@import url(./colors.css);
 
-:root {
-    --aside-bg: #F7F7F7;
-    --drop-shadow: rgba(0, 0, 0, 0.25);
-    --main-color: 	RGB(209,123,48);
-    --user-personal-text: #4C4C4C;
-    --text-color: #181818;
-}
+
 
 html {
     box-sizing: border-box;
@@ -82,12 +78,14 @@ body {
     display: grid;
     justify-items: center;
     padding: 40px;
+    justify-items: stretch;
 }
 
 .aside__personal-photo {
     max-width: 350px;
     border-radius: 50%;
     filter: drop-shadow(4px 4px 4px var(--drop-shadow));
+    justify-self: center;
 }
 
 .aside_adaptive-name {
@@ -161,7 +159,8 @@ body {
 }
 
 .section__title-padding {
-    padding-bottom: 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--main-color);
 }
 
 .section-name {
@@ -222,6 +221,10 @@ body {
     display: block;
     text-align: center;
     padding-top: 65px;
+}
+
+.aside__quote {
+    padding: 30px 0 30px;
 }
 
 }
